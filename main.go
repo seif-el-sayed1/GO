@@ -2,9 +2,11 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/seif-el-sayed1/GO/db"
 )
 
 func main() {
+	db.InitDB()
 	server := gin.Default()
 
 	server.GET("/", func(context *gin.Context) {
